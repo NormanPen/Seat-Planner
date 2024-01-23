@@ -1,0 +1,30 @@
+.tab-container {
+  display: flex;
+  color: black;
+}
+
+.tab-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  width: 129px;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  background-color: #fffbfb;
+  font-size: 16px;
+}
+
+.tab-container div.active {
+  background-color: #fffbfb;
+}
+.tab-container div.is-inactive {
+  background-color: #edeaea;
+}
+.tab-content-container {
+  padding: 10px;
+
+  background-color: #fffbfb;
+}

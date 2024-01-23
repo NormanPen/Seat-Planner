@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <div class="tab-container">
+      <div onclick={handleSheetButtonClick} class={sheetButtonClass}>
+        Planner
+      </div>
+      <div onclick={handleTestButtonClick} class={testButtonClass}>
+        Overview
+      </div>
+    </div>
+    <div class="tab-content-container">
+      <div if:true={isSheetOpen}><c-planner></c-planner></div>
+      <div if:true={isTestOpen}><c-overview></c-overview></div>
+    </div>
+  </div>
+</template>
