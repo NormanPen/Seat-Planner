@@ -1,6 +1,7 @@
 .tab-container {
   display: flex;
-  color: black;
+  color: var(--aq-primary-text);
+  font-family: var(--aq-font);
 }
 
 .tab-container div {
@@ -13,18 +14,18 @@
   width: 129px;
   height: 30px;
   border-radius: 5px 5px 0 0;
-  background-color: #fffbfb;
+  background-color: var(--aq-secondary-background);
   font-size: 16px;
 }
 
 .tab-container div.active {
-  background-color: #fffbfb;
+  background-color: var(--aq-tab-active);
 }
 .tab-container div.is-inactive {
-  background-color: #edeaea;
+  background-color: var(--aq-tab-inactive);
 }
 .tab-content-container {
   padding: 10px;
 
-  background-color: #fffbfb;
+  background-color: var(--aq-secondary-background);
 }

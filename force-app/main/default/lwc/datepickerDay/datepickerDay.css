@@ -1,0 +1,114 @@
+.date-picker-container {
+  width: 312px;
+  height: 475px;
+  background-color: var(--aq-tab-inactive);
+  border: var(--aq-border-pink) 1px solid;
+  border-radius: 8px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 9999; /* Setze einen hohen Z-Index-Wert, um sicherzustellen, dass der Datepicker über anderen Inhalten liegt */
+}
+
+.date-picker {
+  background-color: var(--aq-tab-active);
+  border-radius: 8px;
+  height: 318px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker table {
+  width: 280px;
+  min-width: 280px;
+  height: 200px;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Added margin to separate the table from the buttons */
+}
+
+.date-picker th,
+.date-picker td {
+  text-align: center;
+}
+
+.date-picker th {
+  color: var(--aq-primary-text);
+  font-weight: normal;
+}
+
+.date-picker td {
+  color: var(--aq-secondary-text);
+}
+
+.date-picker th {
+  background-color: var(--aq-tab-active);
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.date-picker td {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: var(--aq-tab-active);
+  cursor: pointer;
+}
+
+.date-picker td:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.date-picker-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.date-picker-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.date-picker-btn-today {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  transition: font-size 0.3s ease;
+}
+
+.date-picker-btn-today:hover {
+  text-decoration: underline;
+}
+
+.date-picker-btn {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust the font size as needed */
+  background: none;
+}
+
+.date-picker-btn-left {
+  margin-right: 5px; /* Optional margin between the buttons */
+}
+
+.date-picker-btn-right {
+  margin-left: 5px; /* Optional margin between the buttons */
+}
+
+.date-picker-container-hidden {
+  display: none;
+}

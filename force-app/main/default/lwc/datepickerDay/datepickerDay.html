@@ -1,0 +1,60 @@
+<template>
+  <c-button-calendar
+    label="1"
+    onbuttonclick={handleButtonClick}
+  ></c-button-calendar>
+  <div class={datePickerClass}>
+    <div class="date-picker-container">
+      <div class="date-picker">
+        <div class="date-picker-nav">
+          <button
+            class="date-picker-btn date-picker-btn-left"
+            onclick={handlePrevMonth}
+          >
+            &lt;
+          </button>
+          <p class="monat">{month}</p>
+          <button
+            class="date-picker-btn date-picker-btn-right"
+            onclick={handleNextMonth}
+          >
+            &gt;
+          </button>
+        </div>
+        <table class="date-picker-table">
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template for:each={tableRows} for:item="row">
+              <tr key={row.key}>
+                <template for:each={row.cells} for:item="cell">
+                  <td
+                    key={cell.key}
+                    data-day={cell.value}
+                    onclick={handleDayClick}
+                  >
+                    {cell.value}
+                  </td>
+                </template>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <div class="date-picker-btn-wrapper">
+          <button class="date-picker-btn-today" onclick={resetToCurrentMonth}>
+            Today
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
