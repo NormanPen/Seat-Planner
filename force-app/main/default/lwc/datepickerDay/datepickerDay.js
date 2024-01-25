@@ -77,7 +77,7 @@ export default class DatepickerDay extends LightningElement {
     this.currentDate.setMonth(this.currentDate.getMonth() + 1);
     this.updateTable();
   }
-
+  /*
   handleDayClick(event) {
     const day = event.target.dataset.day;
     if (day) {
@@ -90,6 +90,30 @@ export default class DatepickerDay extends LightningElement {
         "Ausgewähltes Datum:",
         selectedDate.toLocaleDateString("de-DE")
       );
+      this.handleButtonClick(); // Datepicker schließen
+    }
+  }
+
+*/
+  handleDayClick(event) {
+    const day = event.target.dataset.day;
+    if (day) {
+      const selectedDate = new Date(
+        this.currentDate.getFullYear(),
+        this.currentDate.getMonth(),
+        parseInt(day, 10)
+      );
+      console.log(
+        "Ausgewähltes Datum:",
+        selectedDate.toLocaleDateString("de-DE")
+      );
+
+      // Löse ein benutzerdefiniertes Event aus und übergebe das ausgewählte Datum als Detail
+      const dateSelectedEvent = new CustomEvent("dateselected", {
+        detail: selectedDate
+      });
+      this.dispatchEvent(dateSelectedEvent);
+
       this.handleButtonClick(); // Datepicker schließen
     }
   }
