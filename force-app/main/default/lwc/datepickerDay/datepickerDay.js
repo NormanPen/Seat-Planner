@@ -5,6 +5,7 @@ export default class DatepickerDay extends LightningElement {
   @track tableRows = [];
   @track currentDate;
   @track datePickerVisible = false;
+  @track selectedDay = "";
 
   get datePickerClass() {
     return this.datePickerVisible
@@ -108,6 +109,9 @@ export default class DatepickerDay extends LightningElement {
         selectedDate.toLocaleDateString("de-DE")
       );
 
+      // Aktualisiere den ausgewählten Tag
+      this.selectedDay = day;
+
       // Löse ein benutzerdefiniertes Event aus und übergebe das ausgewählte Datum als Detail
       const dateSelectedEvent = new CustomEvent("dateselected", {
         detail: selectedDate
@@ -117,7 +121,6 @@ export default class DatepickerDay extends LightningElement {
       this.handleButtonClick(); // Datepicker schließen
     }
   }
-
   resetToCurrentMonth() {
     this.setCurrentMonth();
   }

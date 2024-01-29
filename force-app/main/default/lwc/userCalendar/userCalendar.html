@@ -1,0 +1,38 @@
+<template>
+  <h2>{currentDate}</h2>
+
+  <table>
+    <tbody>
+      <tr>
+        <th><input type="date" onchange={handleDateChange} /></th>
+        <th>{Monday}</th>
+        <th>{Tuesday}</th>
+        <th>{Wednesday}</th>
+        <th>{Thursday}</th>
+        <th>{Friday}</th>
+        <th>{Saturday}</th>
+        <th>{Sunday}</th>
+      </tr>
+      <template for:each={users} for:item="user">
+        <tr key={user.Id}>
+          <td>
+            <img
+              src={user.PictureUrl}
+              alt="Profile Pic"
+              width="40"
+              height="40"
+            />
+            {user.Name}
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </template>
+    </tbody>
+  </table>
+</template>
