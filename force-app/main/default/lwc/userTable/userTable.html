@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Benutzerliste">
+    <div class="slds-m-around_medium">
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+          <tr>
+            <th>Bild</th>
+            <th>Name</th>
+            <th>E-Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template for:each={users} for:item="user">
+            <tr key={user.Id}>
+              <td><img src={user.SmallPhotoUrl} alt={user.Name} /></td>
+              <td>{user.Name}</td>
+              <td>{user.Email}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+  </lightning-card>
+</template>
