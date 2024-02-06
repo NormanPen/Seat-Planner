@@ -17,3 +17,8 @@
   font-size: 18px; /* Schriftgröße des Textes */
   cursor: pointer;
 }
+
+.button:hover {
+  background-color: #ff10f0; /* Hintergrundfarbe des Buttons beim Hover */
+  color: #fff; /* Farbe des Textes auf dem Button beim Hover */
+}
