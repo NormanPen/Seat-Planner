@@ -1,0 +1,8 @@
+.seat {
+  width: 42px;
+  height: 80px;
+  background-color: var(--aq-desk-inactive);
+  border: 1px solid var(--aq-border-BEB3FF);
+  /* hover: moisten the color */
+  cursor: pointer;
+}

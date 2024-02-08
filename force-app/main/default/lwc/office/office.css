@@ -1,0 +1,12 @@
+.aq-office {
+  width: 1178px;
+  height: 566px;
+}
+
+.two-seats-group-vertical {
+  display: flex;
+}
+
+.four-seats-group-vertical {
+  display: flex;
+}
